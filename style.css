@@ -1,0 +1,25 @@
+body {
+  /*background-color: #FFAAAA;*/
+}
+h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+ol {
+  counter-reset: cpt1 1968;
+  list-style-type: none;
+  font-weight: 800;
+}
+ol li:before {
+  counter-increment: cpt1 16;
+  content: "Euro" counter(cpt1) ":";
+}
+ol ol {
+  counter-reset: cpt2;
+  list-style-type: none;
+  font-weight: normal;
+}
+ol li ol li:before {
+  counter-increment: cpt2;
+  content: "Rang" counter(cpt2) "en" counter(cpt1) ":";
+}
